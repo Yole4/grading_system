@@ -1628,8 +1628,6 @@ function StaffAccount() {
               <table>
                 <thead>
                   <th>Subjects</th>
-                  <th>Applicable For</th>
-                  <th>Description</th>
                 </thead>
                 <tbody>
                   {subjectToSearch.length === 0 ? (
@@ -1641,8 +1639,6 @@ function StaffAccount() {
                       // <tr className='tr' key={item.id} style={{ backgroundColor: deleteAndEdit ? 'rgb(135, 168, 178)' : '' }}>
                       <tr className={selectedRow === item.id ? 'tr selected' : 'tr'} onClick={(e) => { subjectListRowClicked(item); e.stopPropagation() }} key={item.id} style={{ backgroundColor: deleteAndEdit ? 'rgb(135, 168, 178)' : '' }} >
                         <td>{item.subject}</td>
-                        <td>{item.applicable_for}</td>
-                        <td>{item.description}</td>
                       </tr>
                     ))
                   )}
